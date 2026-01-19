@@ -12,6 +12,15 @@ const Hero: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  // High-quality professional looking avatars for the 'Elite Circle'
+  const AVATARS = [
+    'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=100&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=100&auto=format&fit=crop'
+  ];
+
   return (
     <section className="relative pt-24 pb-20 md:pt-32 md:pb-40 overflow-hidden bg-[#F8FAFC]">
       {/* Subtle Elite Background Elements */}
@@ -35,10 +44,10 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl sm:text-5xl md:text-8xl font-black text-[#0F172A] leading-[1] md:leading-[0.9] tracking-tighter mb-6 md:mb-10"
+              className="text-4xl sm:text-5xl md:text-8xl font-black text-[#0F172A] leading-[1] md:leading-[0.9] tracking-tighter mb-6 md:mb-10 uppercase"
             >
-              Redefining <br />
-              <span className="text-gradient">Elite Travel</span>.
+              Precision <br />
+              <span className="text-gradient">Visa Consulting</span>.
             </motion.h1>
 
             <motion.p 
@@ -47,7 +56,7 @@ const Hero: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-slate-500 text-base md:text-xl max-w-xl mx-auto lg:mx-0 leading-relaxed mb-8 md:mb-12 font-medium"
             >
-              Bespoke visit visa consultancy for the discerning traveler. Our senior analysts ensure your global mobility with unparalleled precision and care.
+              Focus on the Journey, Not the Paperwork. Your trusted Experts in Seamless Travel.
             </motion.p>
 
             <motion.div 
@@ -84,7 +93,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="w-full lg:w-2/5 relative mt-8 lg:mt-0"
           >
-            {/* Visual Mosaic - More High End */}
+            {/* Visual Mosaic */}
             <div className="relative max-w-sm mx-auto lg:max-w-none">
                <motion.div 
                 animate={{ y: [0, -15, 0] }}
@@ -95,20 +104,42 @@ const Hero: React.FC = () => {
                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                </motion.div>
                
+               {/* Success Indicator Badge */}
                <div className="absolute -top-6 -right-4 md:-top-10 md:-right-8 w-20 h-20 md:w-28 md:h-28 bg-[#0F172A] rounded-2xl md:rounded-3xl flex flex-col items-center justify-center text-white rotate-12 shadow-2xl z-20">
                   <span className="text-2xl md:text-3xl font-black">98%</span>
                   <span className="text-[6px] md:text-[8px] font-black uppercase tracking-[0.2em]">Success</span>
                </div>
 
-               <div className="absolute -bottom-6 -left-4 md:-bottom-8 md:-left-8 bg-white p-4 md:p-6 rounded-2xl md:rounded-[2.5rem] shadow-2xl border border-slate-50 flex items-center space-x-3 md:space-x-4 z-20">
-                  <div className="flex -space-x-2 md:-space-x-3">
-                    {[1,2,3].map(i => <img key={i} src={`https://i.pravatar.cc/100?u=${i+20}`} className="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 md:border-4 border-white shadow-sm" alt="Client" />)}
+               {/* REFINED Elite Circle Container */}
+               <motion.div 
+                 initial={{ opacity: 0, x: -20 }}
+                 animate={{ opacity: 1, x: 0 }}
+                 transition={{ delay: 0.5 }}
+                 className="absolute -bottom-6 -left-4 md:-bottom-8 md:-left-12 bg-white/95 backdrop-blur-md p-4 md:p-6 rounded-[2rem] md:rounded-[3rem] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15)] border border-white flex items-center space-x-4 md:space-x-6 z-20 group hover:shadow-[0_35px_60px_-15px_rgba(37,99,235,0.2)] transition-shadow duration-500"
+               >
+                  <div className="flex -space-x-3 md:-space-x-4">
+                    {AVATARS.map((src, i) => (
+                      <motion.div
+                        key={i}
+                        whileHover={{ y: -5, zIndex: 50 }}
+                        className="relative"
+                      >
+                        <img 
+                          src={src} 
+                          className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 md:border-4 border-white shadow-md object-cover transition-transform" 
+                          alt="Client Avatar" 
+                        />
+                      </motion.div>
+                    ))}
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#2563EB] border-2 md:border-4 border-white flex items-center justify-center text-white text-[10px] md:text-xs font-black shadow-md">
+                      +
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-[10px] md:text-xs font-black text-[#0F172A] leading-tight">Elite Circle</p>
-                    <p className="text-[8px] md:text-[10px] text-slate-400 font-bold uppercase tracking-tight">5000+ Files</p>
+                  <div className="flex flex-col border-l border-slate-100 pl-4 md:pl-6">
+                    <p className="text-[#0F172A] font-black leading-none text-xs md:text-base uppercase tracking-tight">Elite Circle</p>
+                    <p className="text-[#2563EB] text-[9px] md:text-[11px] font-black uppercase tracking-widest mt-1">5000+ Files</p>
                   </div>
-               </div>
+               </motion.div>
             </div>
           </motion.div>
         </div>
