@@ -62,8 +62,14 @@ const Footer: React.FC = () => {
         </div>
       </div>
       
-      <div className="container mx-auto px-6 mt-12 flex flex-col md:flex-row justify-between items-center text-[8px] md:text-[10px] font-black uppercase tracking-[0.3em] text-white/20 relative z-10 text-center md:text-left">
-        <p>&copy; 2024 N.F. ImmiConsult Global. Protocol Secured. Islamabad & Lahore Facilities.</p>
+      <div className="container mx-auto px-6 mt-12 flex flex-col md:flex-row justify-between items-center text-[8px] md:text-[10px] font-black uppercase tracking-[0.3em] text-white/20 relative z-10 text-center md:text-left gap-6">
+        <div className="space-y-2 md:space-y-0 md:flex md:items-center md:space-x-4">
+          <p>&copy; 2024 N.F. ImmiConsult Global. Protocol Secured.</p>
+          <div className="hidden md:block w-px h-3 bg-white/10"></div>
+          <p>
+            Developed by <a href="https://www.zararmalik.online/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#2563EB] transition-colors">Zarar & Zulkefl</a>
+          </p>
+        </div>
         <div className="flex space-x-6 md:space-x-10 mt-6 md:mt-0">
           <a href="#" className="hover:text-white transition-colors">Privacy</a>
           <a href="#" className="hover:text-white transition-colors">Terms</a>
