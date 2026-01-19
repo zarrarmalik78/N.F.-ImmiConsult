@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -32,19 +31,23 @@ const Destinations: React.FC = () => {
               key={dest.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.05 }}
+              whileHover={{ 
+                scale: 1.025,
+                y: -12,
+                transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] }
+              }}
               viewport={{ once: true }}
               onClick={() => {
                 navigate(`/destinations/${dest.id}`);
                 window.scrollTo(0, 0);
               }}
-              className="group cursor-pointer flex flex-col bg-white rounded-[3rem] md:rounded-[4rem] shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 border border-slate-50"
+              className="group cursor-pointer flex flex-col bg-white rounded-[3rem] md:rounded-[4rem] shadow-xl hover:shadow-[0_35px_60px_-15px_rgba(15,23,42,0.2)] overflow-hidden transition-all duration-500 border border-slate-50"
             >
               <div className="h-64 md:h-80 relative overflow-hidden">
                 <img 
                   src={dest.image} 
                   alt={dest.name} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-transparent to-transparent opacity-60" />
                 
