@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>N.F. ImmiConsult | Elite Visit Visa Experts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --primary: #0F172A; /* Midnight Navy */
+        --accent: #2563EB;  /* Professional Royal Blue */
+        --elite: #B45309;   /* Sophisticated Gold/Amber */
+        --light: #F8FAFC;
+      }
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: #F8FAFC;
+        color: #0F172A;
+        overflow-x: hidden;
+      }
+      .glass-header {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+      }
+      .elite-gradient {
+        background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+        box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.3);
+      }
+      .text-gradient {
+        background: linear-gradient(135deg, #0F172A 0%, #2563EB 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .grain {
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        opacity: 0.02;
+        pointer-events: none;
+        z-index: 9999;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+      .shimmer {
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
+        background-size: 200% 100%;
+        animation: shimmer 3s infinite;
+      }
+      @keyframes shimmer {
+        0% { background-position: -200% 0; }
+        100% { background-position: 200% 0; }
+      }
+      .blob {
+        filter: blur(100px);
+        z-index: -1;
+      }
+      /* Custom selection color */
+      ::selection {
+        background: #2563EB;
+        color: white;
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@^19.2.3",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
+        "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+        "framer-motion": "https://esm.sh/framer-motion@^11.11.11"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div class="grain"></div>
+    <div id="root"></div>
+  </body>
+</html>
