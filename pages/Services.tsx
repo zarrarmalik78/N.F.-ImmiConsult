@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, Info, FileText, Briefcase, Heart, Award } from 'lucide-react';
@@ -6,33 +5,33 @@ import { CheckCircle, Info, FileText, Briefcase, Heart, Award } from 'lucide-rea
 const Services: React.FC = () => {
   const serviceCategories = [
     {
-      title: 'Tourism Credentials',
+      title: 'Tourist Visas',
       icon: <CheckCircle className="w-8 h-8" />,
-      description: 'Sophisticated visa planning for individual and group leisure journeys across the globe.',
-      details: ['Concierge itinerary drafting', 'Elite hotel vetting', 'Documentation auditing']
+      description: 'Planning a holiday? We help individuals and families with their tourist visa applications.',
+      details: ['Holiday planning help', 'Hotel booking checks', 'Detailed document audit']
     },
     {
-      title: 'Corporate Mobility',
+      title: 'Business Visas',
       icon: <Briefcase className="w-8 h-8" />,
-      description: 'Expedited processing for executives attending high-level meetings and global summits.',
-      details: ['Sponsorship vetting', 'Expedited filing', 'Business profile optimization']
+      description: 'Quick visa support for business trips, meetings, and conferences abroad.',
+      details: ['Invitation checks', 'Fast track submission', 'Professional profile help']
     },
     {
-      title: 'Family Reunification',
+      title: 'Family Visits',
       icon: <Heart className="w-8 h-8" />,
-      description: 'Specialized support for visiting family residing abroad, ensuring emotional ties remain strong.',
-      details: ['Affidavit drafting', 'Relationship auditing', 'Sponsor requirement support']
+      description: 'Visiting your family abroad? We make it easy to gather the right papers to see your loved ones.',
+      details: ['Affidavit help', 'Relationship proof check', 'Family visit guidance']
     }
   ];
 
   const documents = [
-    'Biometric Passport (valid for 6+ months)',
-    'Computerized National ID (CNIC)',
-    'Verified Financial Statements (6 months)',
-    'Professional / Corporate Credentials',
-    'Certified Photographic Proofs',
-    'National Registry Records (FRC/MRC)',
-    'Portfolio of Assets (Strategic Advantage)'
+    'Valid Passport (6 months+)',
+    'National ID Card (CNIC)',
+    'Bank Statements (Last 6 months)',
+    'Job or Business Proof',
+    'Recent Passport Photos',
+    'Family Records (FRC/MRC)',
+    'Property or Asset Papers'
   ];
 
   return (
@@ -45,10 +44,10 @@ const Services: React.FC = () => {
             className="inline-flex items-center space-x-2 bg-blue-50 px-4 py-2 rounded-full mb-8"
           >
             <Award className="w-4 h-4 text-[#2563EB]" />
-            <span className="text-[10px] font-black text-[#2563EB] uppercase tracking-widest">Protocol Intelligence</span>
+            <span className="text-[10px] font-black text-[#2563EB] uppercase tracking-widest">Expert Visa Help</span>
           </motion.div>
-          <h1 className="text-6xl md:text-8xl font-black text-[#0F172A] mb-8 tracking-tighter">Bespoke <span className="text-[#2563EB]">Advisory</span>.</h1>
-          <p className="text-xl text-slate-500 font-medium leading-relaxed">Our elite protocol ensures your visa application exceeds embassy expectations through meticulous auditing and strategic filing.</p>
+          <h1 className="text-6xl md:text-8xl font-black text-[#0F172A] mb-8 tracking-tighter uppercase">Our <span className="text-[#2563EB]">Services</span>.</h1>
+          <p className="text-xl text-slate-500 font-medium leading-relaxed">We help you get your visa by carefully checking every detail of your application before it goes to the embassy.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
@@ -82,8 +81,8 @@ const Services: React.FC = () => {
           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#2563EB]/10 rounded-full blur-[120px] translate-x-1/2 -translate-y-1/2" />
           
           <div className="w-full lg:w-1/2 space-y-12 relative z-10">
-            <h2 className="text-5xl font-black tracking-tighter leading-none uppercase">Document <br/> <span className="text-[#2563EB]">Optimization</span></h2>
-            <p className="text-slate-400 text-lg leading-relaxed font-medium">Embassy protocols are stringent. Our specialists ensure your documentation portfolio is optimized for maximum credibility.</p>
+            <h2 className="text-5xl font-black tracking-tighter leading-none uppercase">Paperwork <br/> <span className="text-[#2563EB]">Checklist</span></h2>
+            <p className="text-slate-400 text-lg leading-relaxed font-medium">Embassies are very strict. We help you organize your documents correctly to make sure your application is accepted.</p>
             <div className="space-y-4">
               {documents.map((doc, idx) => (
                 <div key={idx} className="flex items-center space-x-6 bg-white/5 p-5 rounded-3xl border border-white/5 group hover:bg-white/10 transition-colors">
@@ -100,20 +99,20 @@ const Services: React.FC = () => {
                    <div className="bg-blue-50 p-4 rounded-2xl">
                      <Info className="w-7 h-7 text-[#2563EB]" />
                    </div>
-                   <h3 className="text-3xl font-black text-[#0F172A] tracking-tighter uppercase tracking-widest">Protocol Advisory</h3>
+                   <h3 className="text-3xl font-black text-[#0F172A] tracking-tighter uppercase tracking-widest">Expert Advice</h3>
                 </div>
                 <p className="text-slate-500 leading-relaxed italic text-lg font-medium">
-                  "Authentic proof of intent is the cornerstone of a successful application. We specialize in articulating your professional and social ties to guarantee compliance with foreign regulatory frameworks."
+                  "Showing that you intend to return to Pakistan is the most important part. We help you explain your job and family ties clearly so the embassy understands your case."
                 </p>
                 <div className="pt-10 border-t border-slate-100">
-                  <p className="font-black text-[#0F172A] text-xs uppercase tracking-[0.3em] mb-8">Personalized Assessment Required</p>
+                  <p className="font-black text-[#0F172A] text-xs uppercase tracking-[0.3em] mb-8">Ready to check your file?</p>
                   <motion.a 
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     href="https://wa.me/923000000000" 
                     className="block text-center elite-gradient text-white py-5 rounded-2xl font-black text-xs uppercase tracking-[0.3em] shadow-xl shadow-[#0F172A]/20"
                   >
-                    Request Elite Audit
+                    Chat with an Expert
                   </motion.a>
                 </div>
              </div>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { HOW_IT_WORKS } from '../constants';
@@ -12,12 +11,12 @@ const HowItWorks: React.FC = () => {
             <motion.h2 
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              className="text-5xl md:text-7xl font-black text-[#0F172A] leading-[0.8] mb-8 tracking-tighter"
+              className="text-5xl md:text-7xl font-black text-[#0F172A] leading-[0.8] mb-8 tracking-tighter uppercase"
             >
-              The Master <br />
-              <span className="text-[#2563EB]">Workflow</span>.
+              Our Simple <br />
+              <span className="text-[#2563EB]">Process</span>.
             </motion.h2>
-            <p className="text-slate-500 text-lg font-medium leading-relaxed">A strictly managed four-phase process designed to secure your international credentials with zero margin for error.</p>
+            <p className="text-slate-500 text-lg font-medium leading-relaxed">We have a clear 4-step plan to help you get your visa without any stress or confusion.</p>
           </div>
         </div>
 
@@ -39,7 +38,7 @@ const HowItWorks: React.FC = () => {
                 <div className="w-16 h-16 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center text-[#2563EB] mb-10 group-hover:bg-[#0F172A] group-hover:text-white transition-all duration-500">
                   {step.icon}
                 </div>
-                <h3 className="text-2xl font-black text-[#0F172A] mb-4 tracking-tight">{step.title}</h3>
+                <h3 className="text-2xl font-black text-[#0F172A] mb-4 tracking-tight uppercase">{step.title}</h3>
                 <p className="text-slate-400 font-medium text-sm leading-relaxed">{step.description}</p>
               </div>
               
